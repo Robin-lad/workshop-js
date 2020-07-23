@@ -20,10 +20,5 @@ var villesSansTiretSansEspace = villes.filter(tiretOuEspace);
 
 l(villesSansTiretSansEspace);
 
-function termineS(e){
-    return (e.substring(e.length-1) == 's');
-
-}
-
-var villesMajusculeSeTerminantParS = villes.filter(termineS).map(v => v.toUpperCase());
+var villesMajusculeSeTerminantParS = villes.filter(v => v.endsWith("s")).map(v => v.toUpperCase());
 l(villesMajusculeSeTerminantParS);
