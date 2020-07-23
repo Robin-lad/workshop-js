@@ -56,6 +56,17 @@ var robert = {
 
 afficherPersonne(robert);
 
-function Client(){
-    
+function Client(n, pr, ps, nc){
+    Personne.call(this, n, pr, ps);
+
+    this.numClient = nc;
+
+    this.getInfos = function(){
+        return this.numClient + " " + this.nom + " " + this.prenom;
+    }
 }
+
+var steve = new Client("LUCAS", "Steve", "steve44", "A01");
+afficherPersonne.call(this, steve);
+l(steve.numClient);
+l(steve.getInfos());
